@@ -1,0 +1,18 @@
+.scroll-wrap
+  overflow: hidden
+  .banner-wrap-left
+    overflow: hidden
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20% 20% 20% 20% 20% 20%;
+    margin-left: -60%;
+  .left-to-right
+    animation: left-to-right 35s linear 0s infinite;
+    %banner
+      font-size: 80px;
+      font-weight: 400;
+    .banner
+      @extend %banner
+    .banner-stroke
+      @extend %banner
+      +stroke
+

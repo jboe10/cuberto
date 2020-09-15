@@ -3,7 +3,7 @@ import React from 'react'
 export default function Hero() {
   return (
     <section className="hero">
-      <div className="hero-content">
+      <div className="titles">
         <div className="hero-subtitle">
           We make it happen
         </div>
@@ -17,7 +17,7 @@ export default function Hero() {
             <a href="/">
               Apps
             </a>
-          </div>
+          </div> 
           <div className="hero-title-item">
             <a href="/">
               Branding
