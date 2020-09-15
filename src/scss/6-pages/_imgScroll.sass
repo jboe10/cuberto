@@ -1,0 +1,25 @@
+.img-scroller
+  flex-direction: column;
+  height: 700px;
+  width: 400px;
+  overflow: scroll;
+  position: relative
+  img 
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 700px;
+    width: 400px;
+  .one
+    z-index: 5;
+  .two
+    z-index: 4;
+  .three
+    z-index: 3;
+  .four
+    z-index: 2;
+  .five
+    z-index: 1;
+
+.img-scroller::-webkit-scrollbar
+    display: none;

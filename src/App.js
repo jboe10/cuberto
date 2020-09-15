@@ -6,6 +6,7 @@ import './App.css';
 import './scss/main.sass'
 import Hero from './js/Hero';
 import Banners from './js/Banners';
+import ImgScroll from './js/ImgScroll';
 
 function App() {
   return (
@@ -38,6 +39,11 @@ function App() {
       <Banners name="Design"/> 
       <Banners name="Development"/>
       <Banners name="Marketing"/>
+      <ImgScroll/>
+      <Hero/>
+      <Hero/>
+      <Hero/>
+
     </div>
   );
 }
