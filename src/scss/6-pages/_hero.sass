@@ -1,14 +1,25 @@
-.hero
+.hero-wrap
   display: flex;
-  flex-direction: column;
-  .titles
-    .hero-subtitle
-      display: flex;
-      font-size: 20px;
-    .hero-title
-      display: flex;
-      justify-content: space-between;
-      .hero-title-item
-        font-size: 7vw;
+  .hero
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    .titles
+      .hero-sub-wrap
+        overflow: hidden;
+        .hero-subtitle
+          display: flex;
+          font-size: 20px;
+      .hero-title
+        overflow: hidden;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        .hero-title-item
+          font-size: 6vw;
+          a
+            text-decoration: none
+            +stroke
       
   
