@@ -2,10 +2,10 @@ import React, { useEffect, useRef } from 'react';
 import {TweenMax} from 'gsap';
 
 export default function Hero() {
+  let subTitleEle = useRef(null);
   let titleEle1 = useRef(null);
   let titleEle2 = useRef(null);
   let titleEle3 = useRef(null);
-  let subTitleEle = useRef(null);
 
   useEffect(() => {
     TweenMax.fromTo(subTitleEle, .5, {y: 30} , {y:0})

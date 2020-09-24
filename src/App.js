@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { TweenMax } from 'gsap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import './scss/main.sass'
 import Hero from './js/Hero';
 import Banners from './js/Banners';
-import ImgScroll from './js/ImgScroll';
 import Sidebar from './js/Sidebar';
 
 function App() {
-
+  let statementEle = useRef(null);
   const [showSidebar, setShowSidebar] = useState(false);
   let sideModal; 
 
   useEffect(() => {
-    console.log(showSidebar)
-  }, [showSidebar])
+    TweenMax.fromTo(statementEle, 1.2, {y: 30} , {y:0, delay: .75})
+  }, [])
 
   if (showSidebar) {
     sideModal = <Sidebar setBar = {setShowSidebar}/>
@@ -27,7 +27,7 @@ function App() {
     <div className="App">
       <div className="head-wrap">
         <div className="logo-navbar">
-          Cuberto
+          cuberto
         </div>
         <div className="navbar">
           <div className="showreel-navbar">
@@ -48,7 +48,10 @@ function App() {
         <div className="hero-wrap">
           <Hero/>
         </div>
-        <div className="hero-msg-wrap">
+        <div 
+          ref = {statemnt => { statementEle = statemnt }}
+          className="hero-msg-wrap"
+        >
           <p>
             Leading Digital agency with solid design and developemnt<br/>
             expertise. We build readymade websites, mobile<br/>
