@@ -1,25 +1,62 @@
-.img-scroller
-  flex-direction: column;
-  height: 700px;
-  width: 400px;
-  overflow: scroll;
-  position: relative
-  img 
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 700px;
-    width: 400px;
-  .one
-    z-index: 5;
-  .two
-    z-index: 4;
-  .three
-    z-index: 3;
-  .four
-    z-index: 2;
-  .five
-    z-index: 1;
+.img-scroll-section
+  display: flex;
+  margin-bottom: 500px;
+  margin-left: 10%;
+  margin-right: 10%;
+  .imgs-placeholder
+    display: flex;
+    height: 100%;
+    width: 515px;
+  .quotes
+    // flex-grow: 3;
+    width: 40%;
+    .skill
+      display: flex;
+      flex-direction: column;
+      text-align: start;
+      justify-content: center;
+      height: 840px;
+      margin: 0;
+      h4 
+        margin: 0 0 10px 0;
+        font-weight: 400;
+        color: gray;
+        font-size: 24px
+      p
+        margin: 0;
+        font-weight: 400;
+        font-size: 50px;
+  .bottom 
+    margin-top: auto;
+  .img-scroller
+    height: 840px;
+    width: 60%;
+    position: relative;
+    .one
+      z-index: 5;
+    .two
+      z-index: 4;
+    .three
+      z-index: 3;
+    .four
+      z-index: 2;
+    .five
+      z-index: 1;
+    .img-wrap
+      overflow: hidden;
+      width: 515px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      img 
+        height: 840px;
+        width: 515px;
 
-.img-scroller::-webkit-scrollbar
+  .img-scroller::-webkit-scrollbar
     display: none;
+
+.fixed 
+  position: fixed !important;
+  top: 50px;
+  right: 10%;
+  overflow-y: scroll;
