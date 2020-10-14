@@ -20,18 +20,19 @@ export default function ImgScroll() {
     
       if (container.current !== null){
         const containerHeight = container.current.offsetTop;
-        if(containerHeight - 100 <= window.pageYOffset){
+        if(containerHeight - 50 <= window.pageYOffset){
           imgScroller.current.className = `img-scroller fixed`
           calculateTopImageAndTopImageHeight2([imgOne,imgTwo,imgThree,imgFour,imgFive], containerHeight, 840)
         } 
         // we stop fixed position
-        if( window.pageYOffset + 300 < container.current.offsetTop) {
+        if( window.pageYOffset + 50 < container.current.offsetTop) {
           imgScroller.current.className = `img-scroller`
         }
         // we stop fixed position and set bottom img into place for further scrolling
-        if(window.pageYOffset - 300 > (container.current.offsetHeight)){
+        if(window.pageYOffset - 250 > (container.current.offsetHeight)){
           imgScroller.current.className = `img-scroller bottom`
         }
+        
       }
     }, true)
 
