@@ -1,21 +1,42 @@
 .scroll-wrap
   overflow: hidden
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   .banner-wrap-left
     overflow: hidden
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20% 20% 20% 20% 20% 20%;
     margin-left: -60%;
-  .left-to-right
+  .left-to-right-fast
     animation: left-to-right 35s linear 0s infinite;
-    %banner
-      font-size: 4vw;
-      font-weight: 400;
-    .banner
-      @extend %banner
-    .banner-stroke
-      @extend %banner
-      +stroke
+  .left-to-right-medium
+    animation: left-to-right 40s linear 0s infinite;
+  .left-to-right-slow
+    animation: left-to-right 42s linear 0s infinite;
+  .left-to-right-very-slow
+    animation: left-to-right 44s linear 0s infinite;
+
+  .banner-wrap-right
+    overflow: hidden
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20% 20% 20% 20% 20% 20%;
+    margin-right: -60%;
+  .right-to-left-fast
+    animation: right-to-left 35s linear 0s infinite;
+  .right-to-left-medium
+    animation: right-to-left 40s linear 0s infinite;
+  .right-to-left-slow
+    animation: right-to-left 42s linear 0s infinite;
+  .right-to-left-very-slow
+    animation: right-to-left 44s linear 0s infinite;
+
+%banner
+  font-size: 3.5em;
+  font-weight: 400;
+.banner
+  @extend %banner
+.banner-stroke
+  @extend %banner
+  +stroke-light-grey
   // .right-to-left
   //   animation: right-to-left 35s linear 0s infinite;
   //   %banner

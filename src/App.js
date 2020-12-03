@@ -70,10 +70,10 @@ function App() {
             </div>
           </div>
           <ImgScroll/>
-          <Banners name="Strategy"/>
-          <Banners name="Design"/> 
-          <Banners name="Development"/>
-          <Banners name="Marketing"/>
+          <Banners name="Strategy" speed="slow"/>
+          <Banners name="Design" speed="medium"/> 
+          <Banners name="Development" speed="fast"/>
+          <Banners name="Marketing" speed="very-slow"/>
         </div>
         {sideModal}
       </ScrollBar>
