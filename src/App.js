@@ -4,11 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import './scss/main.sass'
 import Hero from './js/Hero';
-import Banners from './js/Banners';
+import Banner from './js/Banner';
 import Sidebar from './js/Sidebar';
 import ImgScroll from './js/ImgScroll';
 import ScrollBar from 'react-perfect-scrollbar';
 import 'react-perfect-scrollbar/dist/css/styles.css'
+import LatestNews from './js/LatestNews';
+import BannerSection from './js/BannerSection';
+import Footer from './js/Footer';
 
 function App() {
   let statementEle = useRef(null);
@@ -70,13 +73,12 @@ function App() {
             </div>
           </div>
           <ImgScroll/>
-          <Banners name="Strategy" speed="slow"/>
-          <Banners name="Design" speed="medium"/> 
-          <Banners name="Development" speed="fast"/>
-          <Banners name="Marketing" speed="very-slow"/>
+          <BannerSection/>
+          <LatestNews/>
         </div>
         {sideModal}
       </ScrollBar>
+      <Footer/>
     </>
   );
 }

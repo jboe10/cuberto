@@ -1,5 +1,7 @@
 1) MENU ON MOUSE ENTER & MOUSE LEAVE ANIMATIONS
-2) 4 scrolling texts
+2) 4 scrolling texts,
+   make responsive,
+   make not shitty hahah omg looks soo bad
 3) footer - div scrolls to be 100% of page
 4) img scroll section, background color change, pair with img!
 5) header main background

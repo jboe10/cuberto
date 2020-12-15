@@ -16,7 +16,7 @@ export default function ImgScroll() {
   
   
   useEffect(() => {
-    window.addEventListener('scroll', function(){ 
+    window.addEventListener('scroll', () => { 
     
       if (container.current !== null){
         const containerHeight = container.current.offsetTop;

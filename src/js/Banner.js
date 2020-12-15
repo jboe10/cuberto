@@ -3,23 +3,22 @@ import React, {useState, useEffect, useRef} from 'react';
 export default function Banners(props) {
   const [animation, setAnimation] = useState("");
   const animationEle = useRef(null);
-  useEffect(() => {
-    animationEle.current.className = `${animationEle.current.className} left-to-right-${props.speed}`;
-    // TODO:
-    // event listener for scrolling
-    // are we scrolling thru the div?
-      // are we scrolling up or down thru the div?
-        // up ? left - to - right
-        // down? right - to - left
-  }, [])
 
   useEffect(() => {
-
-  }, [])
+    if (props.direction) {
+      if (props.direction === 'left-to-right') {
+        animationEle.current.className = `banner-wrap-left ${props.direction}-${props.speed}`;
+      } else {
+        animationEle.current.className = `banner-wrap-right ${props.direction}-${props.speed}`;
+      }
+    } else {
+      animationEle.current.className = `banner-wrap-left left-to-right-${props.speed}`;
+    }
+  }, [props.direction])
 
   return (
-    <div className="scroll-wrap">
-      <div ref={animationEle} className="banner-wrap-left">
+    <section className="scroll-wrap">
+      <div ref={animationEle}>
         <div className="banner">
           {props.name}
         </div>
@@ -39,6 +38,6 @@ export default function Banners(props) {
           {props.name}
         </div>
       </div>
-    </div>
+    </section>
   )
 }
