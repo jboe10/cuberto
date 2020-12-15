@@ -29,6 +29,7 @@ export default function Footer() {
             <a href="#">Behance</a>
             <a href="#">Patreon</a>
             <a href="#">Facebook</a>
+            <div></div>
             <a href="#">Instagram</a>
             <a href="#">Dribble</a>
           </div>

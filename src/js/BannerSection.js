@@ -42,8 +42,6 @@ export default function BannerSection() {
     return () => {
       window.removeEventListener('scroll', scrolling);
     }
-        // up ? left - to - right
-        // down? right - to - left
   }, [bannerDirection, rightToLeft, lefToRight, bannerSectionEle])
 
   return (
