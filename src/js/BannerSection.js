@@ -33,7 +33,6 @@ export default function BannerSection() {
           }
           topPosition = currentTopPosition;
         }
-        console.log(bannerDirection);
       }
     }
 

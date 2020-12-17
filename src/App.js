@@ -15,6 +15,7 @@ import Footer from './js/Footer';
 
 function App() {
   let statementEle = useRef(null);
+  const appRef = useRef(null);
   const [showSidebar, setShowSidebar] = useState(false);
   let sideModal; 
   
@@ -30,14 +31,14 @@ function App() {
   }
 
   return (
-    <> 
+    <div className="background-trans" ref={appRef}> 
       <ScrollBar 
       options={{
         scrollSpeed: 10,
         swipeEasing: true
       }}
       component="div">
-        <div className="App">
+        <div className="App background-trans">
           <div className="head-wrap">
             <div className="logo-navbar">
               cuberto
@@ -62,7 +63,7 @@ function App() {
               <Hero/>
             </div>
             <div 
-              ref = {statemnt => { statementEle = statemnt }}
+              ref = {statement => { statementEle = statement }}
               className="hero-msg-wrap"
             >
               <p>
@@ -72,14 +73,14 @@ function App() {
               </p>
             </div>
           </div>
-          <ImgScroll/>
+          <ImgScroll ref={appRef}/>
           <BannerSection/>
           <LatestNews/>
         </div>
         {sideModal}
       </ScrollBar>
       <Footer/>
-    </>
+    </div>
   );
 }
 
