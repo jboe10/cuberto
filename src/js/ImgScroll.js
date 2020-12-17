@@ -101,24 +101,44 @@ function ImgScroll(props, ref) {
       <div className="img-scroll-section" ref={container}>
         <div className="quotes">
           <div className="skill">
-            <h4>Languages</h4>
-            <p>TypeScript, JavaScript, NODE js, HTML5, CSS, SCSS/SASS</p>
+            <h4>Riyadh</h4>
+            <p>
+              Official website of Riydah,<br/>
+              Saudi Arabia's capital.
+            </p>
+             <span>design, development, product</span>
           </div>
           <div className="skill">
-            <h4>Frameworks</h4>
-            <p>Express js, React, Aurelia, Django</p>
+            <h4>Nana Asia</h4>
+            <p>
+              Asia's digital magazine,<br/>
+              powered by women.
+            </p>
+            <span>web, design, development</span>
           </div>
           <div className="skill">
-            <h4>Other</h4>
-            <p>PostMan/Insomnia, Git, Bootstrap, Google Drive</p>
+            <h4>Sleepiest</h4>
+            <p>
+              Sleep app helps millions,
+              fall asleep every night.
+            </p>
+            <span>branding, design, mobile, product</span>
           </div>
           <div className="skill">
-            <h4>Soft Skills</h4>
-            <p>ddddd, fffff, eeeeeee, aaaaaaa, ffff</p>
+            <h4>Genesis Vision</h4>
+            <p>
+              Private Trust Managment<br/>
+              and trading platform.
+            </p>
+            <span>branding, design, experience, product</span>
           </div>
           <div className="skill">
-            <h4>fffff</h4>
-            <p>ffff, aaaaaa, ssssss, aaaaaaa</p>
+            <h4>uLesson</h4>
+            <p>
+              Online platform<br/>
+              for distance learning.
+            </p>
+            <span>web, mobile, product</span>
           </div>
         </div>
         <div className="img-scroller" ref={imgScroller}>
