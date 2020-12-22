@@ -29,14 +29,14 @@ h2
       h4 
         margin: 0 0 30px 0;
         font-weight: 400;
-        font-size: 30px
+        font-size: 1.7vw;
       p
         margin: 0 0 25px 0;
         font-weight: 400;
-        font-size: 50px;
+        font-size: 2.5vw;
       span
         color: #696969;
-        font-size: 22px;
+        font-size: 1vw;
   .bottom 
     margin-top: auto;
   .img-scroller
@@ -73,61 +73,31 @@ h2
   transform: translate(0%, -50%); 
   overflow-y: scroll;
 
+// HEIGHT BREAKPOINT
 @media screen and ( max-height: 840px )
 
   .img-scroll-section
-    display: flex;
-    margin-bottom: 500px;
-    margin-left: 10%;
-    margin-right: 10%;
     .imgs-placeholder
-      display: flex;
-      height: 100%;
       width: 350px;
     .quotes
-      // flex-grow: 3;
-      width: 40%;
       .skill
-        display: flex;
-        flex-direction: column;
-        text-align: start;
-        justify-content: center;
         height: 500px;
-        margin: 0;
         h4 
           margin: 0 0 10px 0;
-          font-weight: 400;
-          color: gray;
-          font-size: 24px
         p
           margin: 0;
-          font-weight: 400;
-          font-size: 50px;
-    .bottom 
-      margin-top: auto;
     .img-scroller
       height: 500px;
-      width: 60%;
-      position: relative;
-      .one
-        z-index: 5;
-      .two
-        z-index: 4;
-      .three
-        z-index: 3;
-      .four
-        z-index: 2;
-      .five
-        z-index: 1;
       .img-wrap
-        overflow: hidden;
         width: 350px;
-        position: absolute;
-        top: 0;
-        right: 0;
         img 
           height: 500px;
           width: 350px;
-
     .img-scroller::-webkit-scrollbar
       display: none;
+// width breakpoint
+@media screen and ( max-width: 1200px )
+  .img-scroll-section
+    display: none;
+
+    

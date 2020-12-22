@@ -12,6 +12,7 @@ import 'react-perfect-scrollbar/dist/css/styles.css'
 import LatestNews from './js/LatestNews';
 import BannerSection from './js/BannerSection';
 import Footer from './js/Footer';
+import FeaturedProjects from './js/FeaturedProjects';
 
 function App() {
   let statementEle = useRef(null);
@@ -74,6 +75,7 @@ function App() {
             </div>
           </div>
           <ImgScroll ref={appRef}/>
+          <FeaturedProjects/>
           <BannerSection/>
           <LatestNews/>
         </div>

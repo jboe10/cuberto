@@ -41,7 +41,7 @@ function ImgScroll(props, ref) {
         // calculate which image needs to be show and at what % of it needs to be show
         if(containerHeight - margin <= window.pageYOffset){
           imgScroller.current.className = `img-scroller fixed`
-          calculateTopImageAndTopImageHeight2([imgOne,imgTwo,imgThree,imgFour,imgFive], containerHeight, imgScroller.current.offsetHeight)
+          calculateTopImageAndTopImageHeight([imgOne,imgTwo,imgThree,imgFour,imgFive], containerHeight, imgScroller.current.offsetHeight)
         } 
         // we stop fixed position because we are nearing top
         if( window.pageYOffset + margin < container.current.offsetTop) {
@@ -61,7 +61,7 @@ function ImgScroll(props, ref) {
     }
   }, [])
 
-  function calculateTopImageAndTopImageHeight2(images, imageFixedHeightPos, fixedHeightOfImage) {
+  function calculateTopImageAndTopImageHeight(images, imageFixedHeightPos, fixedHeightOfImage) {
   
     const currentImgPos =(window.pageYOffset - imageFixedHeightPos)/fixedHeightOfImage;
     const currentImgNumber = Math.floor(currentImgPos);
