@@ -4,8 +4,7 @@ export default function LatestNews() {
   return (
     <section className="latest-news">
       <h1>
-        Latest<br/>
-        news
+        Latest<br className="title-br"/> news
       </h1>
 
       <div className="news-column">

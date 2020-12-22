@@ -9,20 +9,28 @@
   display: grid;
   grid-template-rows: 5fr 2fr;
   flex-direction: column;
-  margin-right: 10%;
-  margin-left: 10%;
+  margin-right: 13%;
+  margin-left: 13%;
   .hero-msg-wrap
     p 
       margin: 0;
 .background-trans
   transition: background-color 1s linear;
 .bg-blue
-  background-color: #D8DDEC;
+  background-color: #e6fff8;
 .bg-green
   background-color: #D4EBD4;
 .bg-orange
-  background-color: #F9DFE1;
+  background-color: #ffdfd1;
 .bg-red
-  background-color: #F6D0E8;
+  background-color: #ffe0ed;
 .bg-purple
   background-color: #E9E1FC;
+.bg-tan
+  background-color: #fef5e2;
+
+@media screen and ( max-width: 1200px )
+  .body-wrap 
+    .hero-msg-wrap
+      p 
+        font-size: 20px;

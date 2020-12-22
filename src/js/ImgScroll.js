@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
-import one from '../images/js.png'
-import two from '../images/2.jpg'
-import three from '../images/3.jpg'
-import four from '../images/4.jpg'
-import five from '../images/5.jpg'
+import genesisVision from '../images/genesisVision.jpg'
+import nanaAsia from '../images/nanaAsia.jpg'
+import riydah from '../images/riydah.jpg'
+import sleepiest from '../images/sleepiest.jpg'
+import uLesson from '../images/ulesson.jpg'
 
 const BACKGROUNDS = {
   BG_GREEN: "bg-green",
@@ -11,14 +11,16 @@ const BACKGROUNDS = {
   BG_ORANGE: "bg-orange",
   BG_BLUE: "bg-blue",
   BG_PURPLE: "bg-purple",
+  BG_TAN: "bg-tan"
 }
 
 const backgroundArr = [
-  BACKGROUNDS.BG_GREEN, 
+  BACKGROUNDS.BG_TAN,
   BACKGROUNDS.BG_RED,
-  BACKGROUNDS.BG_ORANGE,
+  BACKGROUNDS.BG_GREEN, 
+  // BACKGROUNDS.BG_PURPLE,
   BACKGROUNDS.BG_BLUE,
-  BACKGROUNDS.BG_PURPLE,
+  BACKGROUNDS.BG_ORANGE,
 ]
 
 function ImgScroll(props, ref) {
@@ -29,7 +31,7 @@ function ImgScroll(props, ref) {
   const imgFour = useRef(null);
   const imgFive = useRef(null);
   const container = useRef(null);
-  
+  const margin = 50;
   
   useEffect(() => {
     window.addEventListener('scroll', () => { 
@@ -37,18 +39,18 @@ function ImgScroll(props, ref) {
       if (container.current !== null){
         const containerHeight = container.current.offsetTop;
         // calculate which image needs to be show and at what % of it needs to be show
-        if(containerHeight - 50 <= window.pageYOffset){
+        if(containerHeight - margin <= window.pageYOffset){
           imgScroller.current.className = `img-scroller fixed`
           calculateTopImageAndTopImageHeight2([imgOne,imgTwo,imgThree,imgFour,imgFive], containerHeight, imgScroller.current.offsetHeight)
         } 
         // we stop fixed position because we are nearing top
-        if( window.pageYOffset + 50 < container.current.offsetTop) {
+        if( window.pageYOffset + margin < container.current.offsetTop) {
           imgScroller.current.className = `img-scroller`
           ref.current.className = `background-trans`
 
         }
         // we stop fixed position and set bottom img into place for further scrolling
-        if(window.pageYOffset - 250 > (container.current.offsetHeight)){
+        if(window.pageYOffset - imgFive.current.offsetHeight > (container.current.offsetHeight)){
           imgScroller.current.className = `img-scroller bottom`
         }
       }
@@ -68,8 +70,8 @@ function ImgScroll(props, ref) {
     const newImageHeightInPx = Math.floor(currentImgHeightPercent * fixedHeightOfImage);
     
     //SET BACKGROUND COLORS
-    if(currentImgHeightPercent > .3) {
-      ref.current.className = `background-trans ${backgroundArr[currentImgNumber]}`
+    if(currentImgHeightPercent < .4) {
+      ref.current.className = `background-trans ${backgroundArr[currentImgNumber+1]}`
     }
 
     // SET IMAGE HEIGHTS
@@ -143,19 +145,19 @@ function ImgScroll(props, ref) {
         </div>
         <div className="img-scroller" ref={imgScroller}>
           <div id="one" className="img-wrap one" ref={imgOne} >
-            <img src={one}  alt="ff"/>
+            <img src={riydah}  alt="ff"/>
           </div>
           <div className="img-wrap two" ref={imgTwo}>
-            <img src={two} alt="ff"/>
+            <img src={nanaAsia} alt="ff"/>
           </div>
           <div className="img-wrap three" ref={imgThree}>
-            <img src={three} alt="ff"/>
+            <img src={sleepiest} alt="ff"/>
           </div>
           <div className="img-wrap four" ref={imgFour}>
-            <img src={four} className="four" alt="ff"/>
+            <img src={genesisVision} className="four" alt="ff"/>
           </div>
           <div className="img-wrap five" ref={imgFive}>
-            <img src={five} className="five" alt="ff"/>
+            <img src={uLesson} className="five" alt="ff"/>
           </div>
         </div>
       </div>

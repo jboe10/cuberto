@@ -67,7 +67,7 @@ function App() {
               className="hero-msg-wrap"
             >
               <p>
-                Leading Digital agency with solid design and developemnt<br/>
+                Leading digital agency with solid design and developemnt<br/>
                 expertise. We build readymade websites, mobile<br/>
                 application, and elaborate online buisnesses services.
               </p>

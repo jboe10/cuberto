@@ -25,9 +25,7 @@ export default function Hero() {
               We make it happen
           </div>
         </div>
-        <div 
-         
-          className="hero-title">
+        <div className="hero-title">
           <div 
             ref = {title => {titleEle1 = title}}
             className="hero-title-item"
@@ -38,10 +36,18 @@ export default function Hero() {
           </div>
           <div 
             ref = {title => {titleEle2 = title}}
-            className="hero-title-item"
+            className="hero-title-item small"
           >
             <a href="/">
               Apps
+            </a>
+          </div>
+          <div 
+            ref = {title => {titleEle2 = title}}
+            className="hero-title-item large"
+          >
+            <a href="/">
+              Applications
             </a>
           </div> 
           <div 

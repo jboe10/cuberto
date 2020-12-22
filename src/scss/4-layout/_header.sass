@@ -1,19 +1,22 @@
 .head-wrap
   display: flex;
   justify-content: space-between;
-  margin: 60px 60px 0 60px;
+  margin: 45px 45px 0 45px;
   .logo-navbar
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 25px;
   .navbar 
     display: flex;
-    align-items: center;
+    justify-content: center;
     .showreel-navbar
       margin-right: 60px;
     .menu-navbar
       margin-right: 25px;
     .bar-navbar
-      position: -webkit-sticky; /* for Safari */
-      position: sticky;
-      top: 0;
-      align-self: flex-start;
       cursor: pointer;
+@media screen and ( max-width: 775px )
+  .head-wrap
+    .logo-navbar
+    .navbar 
+      .showreel-navbar
+        display: none;
