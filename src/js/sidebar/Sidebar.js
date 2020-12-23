@@ -1,8 +1,12 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import SidebarMenuItem from './SidebarMenuItem'
 
 export default function Sidebar(props) {
+
+  
+
   return (
     <div className="modal-bg">
       <div className="modal">
@@ -20,12 +24,12 @@ export default function Sidebar(props) {
               Social
             </div>
             <div className="items">
-              <div className="item">Facebook</div>
-              <div className="item">Behance</div>
-              <div className="item">Dribble</div>
-              <div className="item">Instagram</div>
-              <div className="item">YouTube</div>
-              <div className="item">Patreon</div>
+              <SidebarMenuItem id="social" name="Behance"/>
+              <SidebarMenuItem id="social" name="Dribble"/>
+              <SidebarMenuItem id="social" name="Instagram"/>
+              <SidebarMenuItem id="social" name="YouTube"/>
+              <SidebarMenuItem id="social" name="Patreon"/>
+              <SidebarMenuItem id="social" name="Facebook"/>
             </div>
           </div>
           <div className="menu">
@@ -33,10 +37,10 @@ export default function Sidebar(props) {
               Menu
             </div>
             <div className="links">
-              <div className="link"><a href="/">Work</a></div>
-              <div className="link"><a href="/">About</a></div>
-              <div className="link"><a href="/">Services</a></div>
-              <div className="link"><a href="/">Contacts</a></div>
+              <SidebarMenuItem id="menu" name="Work"/>
+              <SidebarMenuItem id="menu" name="About"/>
+              <SidebarMenuItem id="menu" name="Services"/>
+              <SidebarMenuItem id="menu" name="Contacts"/>
             </div>
           </div>
         </div>

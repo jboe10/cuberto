@@ -32,18 +32,32 @@
           padding-top: 9vh;
           .item
             margin-bottom: 3.5vh;
+            height: 20px;
+            overflow: hidden;
+            position: relative;
+            .name-top
+              position: absolute;
+              top: 0;
+            .name-bottom
+              position: absolute;
+              bottom: 100;
       .menu
         .title
           font-size: 16px;
           font-weight: 500;
-          color: rgba(0, 0, 0, .4);
+          color: #802d2d66;
         .links
           padding-top: 6.5vh;
           .link
             padding: 0;
-            font-size: 7vh; 
+            font-size: 65px; 
             font-weight: 400;
             margin: 0 0 2.5vh 0;
+            display: flex;
+            flex-direction: column;
+            height: 80px;
+            position: relative;
+            overflow: hidden;
             a
               color: black;
     .modal-footer
@@ -62,6 +76,7 @@
         padding-top: 7px;
         border-bottom: 1px solid rgba(0,0,0,.2);
 
+  //TODO: media height query MENU shifts to right when overflow happens!
 
 
  

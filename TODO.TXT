@@ -1,6 +1,5 @@
 1) MENU ON MOUSE ENTER & MOUSE LEAVE ANIMATIONS
-3) Responsive changes across site
-  img scroll
 5 MAYBE) header main background
 6) FOOTER: Tell us about it animation
-7) fix broken animation on title 'APPS'
+7) HAMBURGER MENU 
+8) easy scrolling ?? 

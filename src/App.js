@@ -5,7 +5,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import './scss/main.sass'
 import Hero from './js/Hero';
 import Banner from './js/Banner';
-import Sidebar from './js/Sidebar';
+import Sidebar from './js/sidebar/Sidebar';
 import ImgScroll from './js/ImgScroll';
 import ScrollBar from 'react-perfect-scrollbar';
 import 'react-perfect-scrollbar/dist/css/styles.css'
