@@ -43,7 +43,6 @@ export default function Hero() {
             </a>
           </div>
           <div 
-            ref = {title => {titleEle2 = title}}
             className="hero-title-item large"
           >
             <a href="/">
