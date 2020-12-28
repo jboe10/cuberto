@@ -15,15 +15,38 @@ import Footer from './js/Footer';
 import FeaturedProjects from './js/FeaturedProjects';
 
 function App() {
-  let statementEle = useRef(null);
+  const hamburgerElement = useRef(null);
   const appRef = useRef(null);
+  const [footerElement, setFooterElement] = useState(null);
   const [showSidebar, setShowSidebar] = useState(false);
   let sideModal; 
+  let statementEle = useRef(null);
   
 
   useEffect(() => {
     TweenMax.fromTo(statementEle, 1.2, {y: 30} , {y:0, delay: .75})
   }, [])
+
+  // set hamburger to white when in footer, black when not
+  useEffect(() => {
+    const setHamburgerMenuColor = () => {
+      if(footerElement !== null) {
+        if (footerElement.getBoundingClientRect().top > hamburgerElement.current.offsetTop) {
+          hamburgerElement.current.className = `holder color-black`;
+        } else {
+          hamburgerElement.current.className = `holder color-white`;
+        }
+      }
+    }
+
+    if(hamburgerElement && hamburgerElement.current && footerElement !== null) {
+      window.addEventListener('scroll', setHamburgerMenuColor);
+    }
+  
+    return () => {
+      window.addEventListener('scroll', setHamburgerMenuColor);
+    }
+  }, [hamburgerElement, footerElement])
 
   if (showSidebar) {
     sideModal = <Sidebar setBar = {setShowSidebar}/>
@@ -51,11 +74,13 @@ function App() {
               <div className="menu-navbar">
                 menu
               </div>
-              <div 
-                className="bar-navbar"
-                onClick={() => setShowSidebar(prevShow => !prevShow)}
-              >
-                <FontAwesomeIcon icon={faBars}/>
+              <div className="holder" ref={hamburgerElement}>
+                <div 
+                  className="bar-navbar"
+                  onClick={() => setShowSidebar(prevShow => !prevShow)}
+                >
+                  <FontAwesomeIcon icon={faBars}/>
+                </div>
               </div>
             </div>
           </div>
@@ -81,7 +106,7 @@ function App() {
         </div>
         {sideModal}
       </ScrollBar>
-      <Footer/>
+      <Footer inputRef={el => setFooterElement(el)}/>
     </div>
   );
 }

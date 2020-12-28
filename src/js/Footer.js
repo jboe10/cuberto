@@ -1,8 +1,8 @@
-import React from 'react'
+import React  from 'react'
 
-export default function Footer() {
+export default function Footer(props) {
   return (
-    <footer>
+    <footer ref={props.inputRef}>
       <div className="footer-wrap">
         <div className="idea">
           <h2>
@@ -37,3 +37,4 @@ export default function Footer() {
     </footer>
   )
 }
+

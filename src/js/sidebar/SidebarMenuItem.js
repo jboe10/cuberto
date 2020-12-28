@@ -7,34 +7,23 @@ export default function SidebarMenuItem(props) {
   const social = "social";
   const elementBottom = useRef(null);
   const elementTop = useRef(null)
+  const elementBottomSmall = useRef(null);
+  const elementTopSmall = useRef(null)
 
-  const rollUpSocial = () => {
-    if (elementBottom && elementBottom.current && elementTop && elementTop.current) {
-      TweenMax.fromTo(elementTop.current,.5,{y: 0}, {y: -20})
-      TweenMax.fromTo(elementBottom.current,.5,{y: 20}, {y: 0})
+  const rollAnimation = (topStart, topEnd, bottomStart, bottomEnd, bottom, top) => {
+    if (bottom && bottom.current && top && top.current) {
+      TweenMax.fromTo(top.current,1,{y: topStart}, {y: topEnd})
+      TweenMax.fromTo(bottom.current,1,{y: bottomStart}, {y: bottomEnd})
     }
   }
-
-  const rollDownSocial = () => {
-    if (elementBottom && elementBottom.current && elementTop && elementTop.current) {
-      TweenMax.fromTo(elementTop.current,.5,{y: -20}, {y: 0})
-      TweenMax.fromTo(elementBottom.current,.5,{y: 0}, {y: 20})
-    }
-  }
-
-  const rollUpMenu = () => {
-    if (elementBottom && elementBottom.current && elementTop && elementTop.current) {
-      TweenMax.fromTo(elementTop.current,.5,{y: 0}, {y: -100})
-      TweenMax.fromTo(elementBottom.current,.5,{y: 100}, {y: -100})
-    }
-  }
-
-  const rollDownMenu = () => {
-    if (elementBottom && elementBottom.current && elementTop && elementTop.current) {
-      TweenMax.fromTo(elementTop.current,.5,{y: -100}, {y: 0})
-      TweenMax.fromTo(elementBottom.current,.5,{y: -100}, {y: 100})
-    }
-  }
+  
+  const rollUpSocial = () => {rollAnimation(0, -20, 20, 0, elementBottom, elementTop)};
+  const rollDownSocial  = () => { rollAnimation(-20, 0, 0, 20, elementBottom, elementTop)};
+  const rollUpMenu  = () => { rollAnimation(0, -100, 100, -100, elementBottom, elementTop)};
+  const rollDownMenu  = () => { rollAnimation(-100, 0, -100, 100, elementBottom, elementTop)};
+  const rollUpMenuSmall  = () => { rollAnimation(0, -50, 50, -50, elementBottomSmall, elementTopSmall)};
+  const rollDownMenuSmall  = () => { rollAnimation(-50, 0, -50, 50, elementBottomSmall, elementTopSmall)};
+ 
 
   if (props.id === social){
     return (
@@ -45,10 +34,17 @@ export default function SidebarMenuItem(props) {
     )
   } else if (props.id === menu) {
       return (
-        <div onMouseEnter={rollUpMenu} onMouseLeave={rollDownMenu} className="link">
-          <a className="link-top" ref={elementTop} href="/">{props.name}</a>
-          <a className="link-bottom" ref={elementBottom} href="/">{props.name}</a>
-        </div>
+        <>
+          <div onMouseEnter={rollUpMenu} onMouseLeave={rollDownMenu} className="link">
+            <a ref={elementTop} href="/">{props.name}</a>
+            <a ref={elementBottom} href="/">{props.name}</a>
+          </div>
+
+          <div className="link-menu-small" onMouseEnter={rollUpMenuSmall} onMouseLeave={rollDownMenuSmall}>
+            <a ref={elementTopSmall} href="/">{props.name}</a>
+            <a ref={elementBottomSmall} href="/">{props.name}</a>
+          </div>
+        </>
       )
   } else {
     return (

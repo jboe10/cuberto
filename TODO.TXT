@@ -1,5 +1,3 @@
-1) MENU ON MOUSE ENTER & MOUSE LEAVE ANIMATIONS
 5 MAYBE) header main background
 6) FOOTER: Tell us about it animation
-7) HAMBURGER MENU 
 8) easy scrolling ?? 

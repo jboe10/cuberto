@@ -73,10 +73,13 @@ footer
           p 
         .footer-socs
           margin-top: 50px;
-          grid-template-columns: 1fr 1fr;
-          grid-template-rows: 1fr 1fr 1fr;
+          grid-template-columns: auto auto;
+          grid-template-rows: auto auto auto;
+          grid-column-gap: 10px;
           a
-            margin-right: 10px;
             font-size: 14px;
           .placeholder
             dipslay: block;
+@media screen and ( max-width: 750px )
+  footer
+    height: 100vh;

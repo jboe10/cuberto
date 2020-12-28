@@ -5,8 +5,6 @@ import SidebarMenuItem from './SidebarMenuItem'
 
 export default function Sidebar(props) {
 
-  
-
   return (
     <div className="modal-bg">
       <div className="modal">
