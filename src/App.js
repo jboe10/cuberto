@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { TweenMax } from 'gsap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
-import './scss/main.sass'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import './scss/main.sass';
 import Hero from './js/Hero';
 import Sidebar from './js/sidebar/Sidebar';
 import ImgScroll from './js/ImgScroll';
