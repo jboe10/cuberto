@@ -1,0 +1,42 @@
+.featured-projects
+  display: none;
+  margin-bottom: 100px;
+@media screen and ( max-width: 1200px  )
+  .featured-projects
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .project
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10% 5% 0 5%;
+      img
+        border-radius: 35px;
+        width: 42vw;
+        height: 42vw;
+      .project-text
+        margin: 5% 22% 0 22%;
+        p
+          text-align: center;
+          font-size: 20px;
+          span
+            font-weight: 500;
+
+@media screen and ( max-width: 775px )
+  .featured-projects
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    .project
+      align-items: center;
+      img
+        width: 465px;
+        height: 465px;
+      .project-text
+        margin: 0 20% 0 20%;
+@media screen and ( max-width: 485px )
+  .featured-projects
+    .project
+      img
+        width: 95vw;
+        height: 95vw;

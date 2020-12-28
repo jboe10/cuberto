@@ -1,0 +1,3 @@
+5 MAYBE) header main background
+6) FOOTER: Tell us about it animation
+8) easy scrolling ?? 

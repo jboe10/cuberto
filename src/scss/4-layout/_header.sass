@@ -1,5 +1,31 @@
-header 
-  nav 
-    color: #000000
-    font-size: 18px
-    font-weight: 500
+.head-wrap
+  display: flex;
+  justify-content: space-between;
+  margin: 45px 45px 0 45px;
+  .logo-navbar
+    font-weight: 600;
+    font-size: 25px;
+  .navbar 
+    display: flex;
+    justify-content: center;
+    .showreel-navbar
+      margin-right: 60px;
+      display: flex;
+      align-items: center;
+    .menu-navbar
+      display: flex;
+      align-items: center;
+      margin-right: 25px;
+    .holder
+      display: flex;
+      align-items: center;
+      margin-right: 17px;
+      .bar-navbar
+        cursor: pointer;
+        position: fixed;
+@media screen and ( max-width: 775px )
+  .head-wrap
+    .logo-navbar
+    .navbar 
+      .showreel-navbar
+        display: none;

@@ -1,0 +1,85 @@
+footer
+  height: 100vh;
+  min-height: 750px;
+  background-color: black;
+  color: white;
+  .footer-wrap
+    height: 100%;
+    margin: 0 13% 0 13%;
+    display: flex;
+    flex-direction: column;
+    .idea
+      margin-top: 20%;
+      flex-grow: 4;
+      h2 
+        font-size: 5.2vw;
+        font-weight: 500;
+        margin: 0;
+      .underline-shrink-animation
+        font-weight: 300;
+        font-size: 5.2vw;
+
+    .info
+      margin-bottom: 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .contact
+        display: flex;
+        flex-direction: column;
+        h4
+          display: flex;
+          margin: 0;
+          margin-right: auto;
+          border-bottom: 1px white solid;
+          font-size: 23px;
+          margin-bottom: 20px;
+        p 
+          margin: 0;
+          font-size: 15px;
+          font-weight: 500;
+          color: gray;
+          margin-bottom: 20px;
+      .footer-socs
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        .bottom-row-1
+          grid-column: 2;
+        .bottom-row-2
+          grid-column: 3;
+
+        a
+          color: white;
+          font-size: 20px;
+@media screen and ( max-width: 1025px )
+  footer
+    height: 80vh;
+    min-height: 500px;
+    .footer-wrap
+      justify-content: center;
+      .idea
+        h2
+          text-align: center; 
+          font-size: 55px;
+        .underline-shrink-animation
+          font-size: 50px;
+      .info
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .contact
+          align-items: center;
+          h4
+          p 
+        .footer-socs
+          margin-top: 50px;
+          grid-template-columns: auto auto;
+          grid-template-rows: auto auto auto;
+          grid-column-gap: 10px;
+          a
+            font-size: 14px;
+          .placeholder
+            dipslay: block;
+@media screen and ( max-width: 750px )
+  footer
+    height: 100vh;
