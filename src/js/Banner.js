@@ -1,7 +1,6 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 
 export default function Banners(props) {
-  const [animation, setAnimation] = useState("");
   const animationEle = useRef(null);
 
   useEffect(() => {
@@ -14,7 +13,7 @@ export default function Banners(props) {
     } else {
       animationEle.current.className = `banner-wrap-left left-to-right-${props.speed}`;
     }
-  }, [props.direction])
+  }, [props])
 
   return (
     <section className="scroll-wrap">

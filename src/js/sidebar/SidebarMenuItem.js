@@ -1,7 +1,6 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useRef} from 'react';
 import {TweenMax} from 'gsap';
           
-
 export default function SidebarMenuItem(props) {
   const menu = "menu";
   const social = "social";
@@ -23,13 +22,12 @@ export default function SidebarMenuItem(props) {
   const rollDownMenu  = () => { rollAnimation(-100, 0, -100, 100, elementBottom, elementTop)};
   const rollUpMenuSmall  = () => { rollAnimation(0, -50, 50, -50, elementBottomSmall, elementTopSmall)};
   const rollDownMenuSmall  = () => { rollAnimation(-50, 0, -50, 50, elementBottomSmall, elementTopSmall)};
- 
 
   if (props.id === social){
     return (
       <div onMouseEnter={rollUpSocial} onMouseLeave={rollDownSocial} className="item">
-        <div ref={elementTop} className="name-top">{props.name}</div>
-        <div ref={elementBottom} className="name-bottom">{props.name}</div>
+        <div ref={elementTop} className="name-top"><a href="/">{props.name}</a></div>
+        <div ref={elementBottom} className="name-bottom"><a href="/">{props.name}</a></div>
       </div>
     )
   } else if (props.id === menu) {

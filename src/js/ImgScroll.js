@@ -18,7 +18,6 @@ const backgroundArr = [
   BACKGROUNDS.BG_TAN,
   BACKGROUNDS.BG_RED,
   BACKGROUNDS.BG_GREEN, 
-  // BACKGROUNDS.BG_PURPLE,
   BACKGROUNDS.BG_BLUE,
   BACKGROUNDS.BG_ORANGE,
 ]
@@ -34,8 +33,7 @@ function ImgScroll(props, ref) {
   const margin = 50;
   
   useEffect(() => {
-    window.addEventListener('scroll', () => { 
-
+    const imageScroll = () => {
       if (container.current !== null){
         const containerHeight = container.current.offsetTop;
         // calculate which image needs to be show and at what % of it needs to be show
@@ -54,12 +52,14 @@ function ImgScroll(props, ref) {
           imgScroller.current.className = `img-scroller bottom`
         }
       }
-    }, true)
+    }
+
+    window.addEventListener('scroll', imageScroll);
 
     return () => {
-      window.removeEventListener("scroll");
+      window.removeEventListener("scroll", imageScroll);
     }
-  }, [])
+  })
 
   function calculateTopImageAndTopImageHeight(images, imageFixedHeightPos, fixedHeightOfImage) {
   
@@ -166,5 +166,4 @@ function ImgScroll(props, ref) {
 }
 
 const forwardedImgScroll = React.forwardRef(ImgScroll)
-
 export default forwardedImgScroll;

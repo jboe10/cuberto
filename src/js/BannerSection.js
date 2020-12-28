@@ -6,12 +6,9 @@ export default function BannerSection() {
   const rightToLeft = 'right-to-left';
   const bannerSectionEle = useRef(null);
   const [bannerDirection, setBannerDirection] = useState("");
-
   
   useEffect(() => {
     let topPosition = window.pageYOffset;
-    // TODO:
-    // event listener for scrolling
     const scrolling = () => {
       if (bannerSectionEle !== null) {
         const topVisible = (bannerSectionEle.current.offsetTop - window.pageYOffset- window.innerHeight < 0)? true: false;

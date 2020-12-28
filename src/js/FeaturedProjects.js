@@ -1,4 +1,3 @@
-import { faProjectDiagram } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
 import Project from './Project'
 import genesisVision from '../images/genesisVisionSmall.png'
