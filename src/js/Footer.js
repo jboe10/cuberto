@@ -26,11 +26,11 @@ export default function Footer(props) {
             </div>
           </div>
           <div className="footer-socs">
-            <a href="#">Facebook</a>
-            <a href="#">Patreon</a>
-            <a href="#">Behance</a>
-            <a href="#" className="bottom-row-1">Dribble</a>
-            <a href="#" className="bottom-row-2">Instagram</a>
+            <a href="/">Facebook</a>
+            <a href="/">Patreon</a>
+            <a href="/">Behance</a>
+            <a href="/" className="bottom-row-1">Dribble</a>
+            <a href="/" className="bottom-row-2">Instagram</a>
           </div>
         </div>
       </div>
