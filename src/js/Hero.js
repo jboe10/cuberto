@@ -22,7 +22,7 @@ export default function Hero() {
             ref = {sub => {subTitleEle = sub}}
             className="hero-subtitle"
           >
-              We make it happen
+            Jonathan Boe
           </div>
         </div>
         <div className="hero-title">
@@ -30,32 +30,19 @@ export default function Hero() {
             ref = {title => {titleEle1 = title}}
             className="hero-title-item"
           >
-            <a href="/">
-              Websites
-            </a>
+            UI/UX
           </div>
           <div 
             ref = {title => {titleEle2 = title}}
-            className="hero-title-item small"
+            className="hero-title-item"
           >
-            <a href="/">
-              Apps
-            </a>
+            Back-End
           </div>
-          <div 
-            className="hero-title-item large"
-          >
-            <a href="/">
-              Applications
-            </a>
-          </div> 
           <div 
             ref = {title => {titleEle3 = title}}
             className="hero-title-item"
           >
-            <a href="/">
-              Branding
-            </a>
+            DevOps
           </div>
         </div>
       </div>
