@@ -26,21 +26,21 @@ export default function SidebarMenuItem(props) {
   if (props.id === social){
     return (
       <div onMouseEnter={rollUpSocial} onMouseLeave={rollDownSocial} className="item">
-        <div ref={elementTop} className="name-top"><a href="/">{props.name}</a></div>
-        <div ref={elementBottom} className="name-bottom"><a href="/">{props.name}</a></div>
+        <div ref={elementTop} className="name-top"><a href={props.link}>{props.name}</a></div>
+        <div ref={elementBottom} className="name-bottom"><a href={props.link}>{props.name}</a></div>
       </div>
     )
   } else if (props.id === menu) {
       return (
         <>
           <div onMouseEnter={rollUpMenu} onMouseLeave={rollDownMenu} className="link">
-            <a ref={elementTop} href="/">{props.name}</a>
-            <a ref={elementBottom} href="/">{props.name}</a>
+            <a ref={elementTop} href={props.link}>{props.name}</a>
+            <a ref={elementBottom} href={props.link}>{props.name}</a>
           </div>
 
           <div className="link-menu-small" onMouseEnter={rollUpMenuSmall} onMouseLeave={rollDownMenuSmall}>
-            <a ref={elementTopSmall} href="/">{props.name}</a>
-            <a ref={elementBottomSmall} href="/">{props.name}</a>
+            <a ref={elementTopSmall} href={props.link}>{props.name}</a>
+            <a ref={elementBottomSmall} href={props.link}>{props.name}</a>
           </div>
         </>
       )

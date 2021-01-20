@@ -17,28 +17,23 @@ export default function Sidebar(props) {
           </div>
         </div>
         <div className="modal-body">
-          <div className="social">
-            <div className="title">
-              Social
-            </div>
-            <div className="items">
-              <SidebarMenuItem id="social" name="Behance"/>
-              <SidebarMenuItem id="social" name="Dribble"/>
-              <SidebarMenuItem id="social" name="Instagram"/>
-              <SidebarMenuItem id="social" name="YouTube"/>
-              <SidebarMenuItem id="social" name="Patreon"/>
-              <SidebarMenuItem id="social" name="Facebook"/>
-            </div>
-          </div>
           <div className="menu">
             <div className="title">
               Menu
             </div>
             <div className="links">
-              <SidebarMenuItem id="menu" name="Work"/>
-              <SidebarMenuItem id="menu" name="About"/>
-              <SidebarMenuItem id="menu" name="Services"/>
-              <SidebarMenuItem id="menu" name="Contacts"/>
+              <SidebarMenuItem id="menu" name="About" link="#about"/>
+              <SidebarMenuItem id="menu" name="Projects" link="#projects"/>
+              <SidebarMenuItem id="menu" name="Contact" link="#contact"/>
+            </div>
+          </div>
+          <div className="social">
+            <div className="title">
+              Social
+            </div>
+            <div className="items">
+              <SidebarMenuItem id="social" name="Linked in" link="https://www.linkedin.com/in/jonathan-d-boe"/>
+              <SidebarMenuItem id="social" name="GitHub" link="https://github.com/jboe10"/>
             </div>
           </div>
         </div>
@@ -47,7 +42,7 @@ export default function Sidebar(props) {
             Get in Touch
           </div>
           <div className="info">
-            info@cuberto.com
+            jdboe2018@gmail.com
           </div>
         </div>
       </div>

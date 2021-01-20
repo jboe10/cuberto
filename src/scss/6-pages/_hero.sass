@@ -9,6 +9,7 @@
       .hero-sub-wrap
         overflow: hidden;
         .hero-subtitle
+          margin-left: 10px;
           display: flex;
           font-size: 26px;
       .hero-title
@@ -18,13 +19,11 @@
         justify-content: space-between;
         .hero-title-item
           font-size: 6vw;
-          a
-            text-decoration: none
-            +stroke
-            &:hover
-              -webkit-text-fill-color: black;
-        .large
-          display: none
+          text-decoration: none
+          +stroke
+          &:hover
+            -webkit-text-fill-color: black;
+
 @media screen and ( max-width: 1200px )
   .hero-wrap
     .hero 
@@ -42,8 +41,6 @@
               -webkit-text-fill-color: black;
           .large
             display: block;
-          .small
-            display: none;
 @media screen and ( max-width: 775px )
   .hero-wrap
     .hero 

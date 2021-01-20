@@ -8,8 +8,6 @@ import Sidebar from './js/sidebar/Sidebar';
 import ImgScroll from './js/ImgScroll';
 import ScrollBar from 'react-perfect-scrollbar';
 import 'react-perfect-scrollbar/dist/css/styles.css'
-import LatestNews from './js/LatestNews';
-import BannerSection from './js/BannerSection';
 import Footer from './js/Footer';
 import FeaturedProjects from './js/FeaturedProjects';
 
@@ -63,15 +61,9 @@ function App() {
         <div className="App background-trans">
           <div className="head-wrap">
             <div className="logo-navbar">
-              cuberto
+              Portfolio
             </div>
             <div className="navbar">
-              <div className="showreel-navbar">
-                our showreel
-              </div>
-              <div className="menu-navbar">
-                menu
-              </div>
               <div className="holder" ref={hamburgerElement}>
                 <div 
                   className="bar-navbar"
@@ -82,7 +74,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="body-wrap">
+          <div id="about" className="body-wrap">
             <div className="hero-wrap">
               <Hero/>
             </div>
@@ -90,17 +82,17 @@ function App() {
               ref = {statement => { statementEle = statement }}
               className="hero-msg-wrap"
             >
-              <p>
-                Leading digital agency with solid design and developemnt<br/>
-                expertise. We build readymade websites, mobile<br/>
-                application, and elaborate online buisnesses services.
+              <p id="projects">
+                Software Engineer with Skills in Web Development<br/>
+                Exercising my skills by recreating websites from sight<br/>
+                Using real industry standard websites for learning
               </p>
             </div>
           </div>
           <ImgScroll ref={appRef}/>
           <FeaturedProjects/>
-          <BannerSection/>
-          <LatestNews/>
+          {/* <BannerSection/> */}
+          {/* <LatestNews/> */}
         </div>
         {sideModal}
       </ScrollBar>
