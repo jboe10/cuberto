@@ -128,7 +128,7 @@ function ImgScroll(props, ref) {
             <h4>My Portfolio(This Site)</h4>
             <p>
               React, Javascript, SASS,<br/>
-              HTML, GitHub Pages<br/>
+              HTML, Heroku<br/>
             </p>
             <span>Front-End, DevOps</span>
           </div>

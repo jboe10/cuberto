@@ -29,7 +29,7 @@ export default function FeaturedProjects() {
       <Project
         name="My Portfolio"
         picture={rct}
-        blurb="React, Javascript, SASS, HTML, GitHub Pages"
+        blurb="React, Javascript, SASS, HTML, Heroku"
         link="/"
       /> 
       {/* <Project
