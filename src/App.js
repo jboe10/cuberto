@@ -84,10 +84,10 @@ function App() {
             >
               <p id="projects">
                 Software Engineer with Skills in Web Development.<br/>
-                Exercising my skills by recreating websites from sight.<br/>
-                Either Full pages or sections of websites that Peak my interest.<br/>
+                Exercising my skills by recreating websites from sight,<br/>
+                On full pages or sections of websites.<br/>
                 Apps are hosted for free on Heroku,<br/>
-                so expect longer than average load time.<br/>
+                so expect longer than average load time<br/>
               </p>
             </div>
           </div>
