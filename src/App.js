@@ -83,9 +83,11 @@ function App() {
               className="hero-msg-wrap"
             >
               <p id="projects">
-                Software Engineer with Skills in Web Development<br/>
-                Exercising my skills by recreating websites from sight<br/>
-                Using real industry standard websites for learning
+                Software Engineer with Skills in Web Development.<br/>
+                Exercising my skills by recreating websites from sight.<br/>
+                Either Full pages or sections of websites that Peak my interest.<br/>
+                Apps are hosted for free on Heroku,<br/>
+                so expect longer than average load time.<br/>
               </p>
             </div>
           </div>
